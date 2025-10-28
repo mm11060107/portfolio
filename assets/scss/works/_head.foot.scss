@@ -1,0 +1,365 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+// タイトル部分
+.work {
+
+  &-header {
+    .nav {
+      padding-bottom: 48px;
+    }
+
+    .nav__title {
+      margin-bottom: 48px;
+    }
+
+    .nav__toc {
+      li {
+        margin-bottom: 20px;
+      }
+
+      .num {
+        font-size: 14px;
+      }
+
+      .en {
+        font-size: 18px;
+        margin-right: 16px;
+      }
+
+      .ja {
+        font-size: 12px;
+        padding: 0 6px;
+        opacity: 0.7;
+        border-right: 1px solid rgba(75, 75, 75, 0.7);
+        border-left: 1px solid rgba(75, 75, 75, 0.7);
+      }
+
+      .line {
+        display: none;
+      }
+    }
+  }
+
+  &__head {
+    z-index: 100;
+    padding-top: 58px;
+
+    &-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 110px;
+      background-color: $primary-gray;
+      color: $base-white;
+      gap: 10px;
+      padding: 0 10px;
+    }
+
+    &-num {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .num {
+        font-family: $deco;
+        font-size: 40px;
+        letter-spacing: 2.4px;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      .bottom {
+        font-family: $main-title;
+        font-size: 14px;
+        font-weight: $medium;
+        letter-spacing: 0.8px;
+      }
+    }
+
+    &-rect {
+      width: 20px;
+      height: 5px;
+      background-color: $accent-orange;
+
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+
+      h1 {
+        font-family: $main-title;
+        font-size: 32px;
+        font-weight: $bold;
+        letter-spacing: 2.2px;
+      }
+
+      h2 {
+        font-family: $main-title;
+        font-size: 20px;
+        font-weight: $medium;
+        letter-spacing: 0.8px;
+        border-left: 1px solid $base-white;
+        border-right: 1px solid $base-white;
+        padding: 0 8px;
+      }
+    }
+
+    &-divider {
+      height: 12px;
+    }
+  }
+
+  // ボタン部分
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 44px;
+
+    &.next-only {
+      justify-content: flex-end;
+    }
+
+    &.prev-only {
+      justify-content: flex-start;
+    }
+
+    .next {
+      .arrow {
+        transform: rotate(45deg);
+      }
+    }
+
+    &.prev {
+      flex-direction: row-reverse;
+    }
+
+    .prev {
+      .arrow {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 20px;
+
+    &-text {
+      font-family: $sub-title;
+      font-size: 14px;
+      color: $secondry-brown;
+      opacity: 0.7;
+      letter-spacing: 1.4px;
+
+    }
+
+    &-arrow {
+      display: flex;
+      justify-content: center;
+
+      .arrow {
+        width: 7.5px;
+        height: 7.5px;
+        border-top: 1.5px solid rgba(68, 51, 37, 0.7);
+        border-right: 1.5px solid rgba(68, 51, 37, 0.7);
+      }
+    }
+  }
+}
+
+//ボタン遷移アニメーション
+body.sub-page {
+  opacity: 1;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* NEXT → 右へスライドアウト */
+// body.slide-out-right {
+//   opacity: 0;
+//   transform: translateX(-50px);
+// }
+
+/* ページ遷移アニメーション用 */
+.page-wrapper {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* NEXTボタン押したとき：右にスライドアウト */
+body.slide-out-next .page-wrapper {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* PREVボタン押したとき：左にスライドアウト */
+body.slide-out-prev .page-wrapper {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/* ページ読み込み時：スライドイン */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.page-wrapper {
+  animation: slideIn 0.6s ease;
+}
+
+//PC版
+@media screen and (min-width: 768px) {
+  .sub-page {
+    .hamburger {
+      position: absolute;
+      opacity: 1;
+      pointer-events: auto;
+      transform: none;
+      transition: none;
+
+      &__icon {
+        position: absolute;
+        background-color: transparent;
+      }
+
+      &__line {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .work {
+
+    &-header {
+      .nav__title {
+        margin-bottom: 32px;
+      }
+
+      .nav__toc {
+        li {
+          margin-bottom: 20px;
+
+          &:hover {
+            .ja {
+              border-right: 1px solid $accent-orange;
+              border-left: 1px solid $accent-orange;
+              transition: all 0.2s;
+            }
+          }
+        }
+
+        .num {
+          font-size: 16px;
+        }
+
+        .en {
+          font-size: 18px;
+          margin-right: 24px;
+        }
+
+        .ja {
+          font-size: 14px;
+          padding: 0 8px;
+        }
+      }
+    }
+
+    &__head {
+      padding-top: 0;
+
+      &-inner {
+        justify-content: flex-start;
+        padding-left: 40px;
+        height: 170px;
+        gap: 30px;
+      }
+
+      &-num {
+        .num {
+          font-size: 72px;
+          letter-spacing: 4.8px;
+        }
+
+        .bottom {
+          font-size: 20px;
+          letter-spacing: 1.2px;
+        }
+      }
+
+      &-rect {
+        width: 48px;
+        height: 12px;
+      }
+
+      &-title {
+        flex-direction: row;
+        gap: 40px;
+
+        h1 {
+          font-size: 72px;
+          letter-spacing: 4.8px;
+        }
+
+        h2 {
+          font-size: 32px;
+          letter-spacing: 2.4px;
+          padding: 0 12px;
+        }
+      }
+
+      &-divider {
+        display: block;
+        height: 20px;
+        background-repeat: repeat-x;
+        background-size: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    &__btn-wrapper {
+      margin-bottom: 80px;
+    }
+
+    &__btn {
+      gap: 10px;
+      margin: 0 40px;
+
+      &-text {
+        font-size: 18px;
+        letter-spacing: 1.6px;
+
+        &:hover {
+          border-bottom: 2px solid rgba(68, 51, 37, 0.7);
+          transition: all 0.1s ease;
+        }
+
+      }
+
+      &-arrow {
+        .arrow {
+          width: 10.3px;
+          height: 10.3px;
+          border-top: 2px solid rgba(68, 51, 37, 0.7);
+          border-right: 2px solid rgba(68, 51, 37, 0.7);
+        }
+      }
+    }
+  }
+}

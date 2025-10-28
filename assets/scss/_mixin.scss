@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+@mixin main-title{
+  font-family: $main-title;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+@mixin sub-title{
+  display: inline-block;
+  font-family: $sub-title;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  background-color: $secondry-brown;
+  color: $base-white;
+  padding: 6px 12px;
+}
+
+@mixin text{
+  font-family: $text-ja;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+@mixin sub-text{
+  font-family: $text-en;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@mixin inter{
+  font-family: $text-en;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}

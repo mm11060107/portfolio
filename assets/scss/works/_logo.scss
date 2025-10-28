@@ -1,0 +1,115 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+
+.work {
+  &__logo {
+
+    .work-info {
+      margin-bottom: 80px;
+    }
+
+    &-title {
+      font-family: $sub-title;
+      font-size: 24px;
+      font-weight: $bold;
+      letter-spacing: 1.4px;
+      color: $base-gray;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    &-variation {
+      .variation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 80px;
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    &-others {
+      .others {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 44px;
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.logo-points-pc {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .work {
+    &__logo {
+      .logo-points-sp {
+        display: none;
+      }
+
+      .logo-points-pc {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .work-info {
+        margin-bottom: 48px;
+      }
+
+      &-title {
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      &-variation {
+        width: 80%;
+        margin: 0 auto;
+        .variation {
+          flex-direction: row;
+          gap: 24px;
+
+          img {
+            width: 150px;
+          }
+        }
+      }
+
+      &-collect {
+        width: 50%;
+      }
+
+      &-others {
+        margin: 150px auto 120px;
+
+        .work__logo-title {
+          font-size: 28px;
+        }
+
+        .others {
+          flex-direction: row;
+          justify-content: flex-start;
+          img{
+            width: 180px;
+          }
+        }
+      }
+    }
+  }
+
+}

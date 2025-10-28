@@ -20,6 +20,7 @@ $(function () {
               }
               // 念のため scroll イベントを発火
               $(window).trigger('scroll');
+              fadeUpAction();
             });
           });
 

@@ -827,8 +827,12 @@ body {
 .works__items:last-child .works__single:last-child {
   margin-bottom: 0;
 }
+.works__items.square .works-thumb {
+  width: 250px;
+  margin: 0 auto 4px;
+}
 .works__single {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 .works__single .works-thumb {
   width: 100%;
@@ -836,10 +840,6 @@ body {
   border: 1px solid #393939;
   padding: 5px;
   margin-bottom: 4px;
-}
-.works__single.square .works-thumb {
-  width: 250px;
-  margin: 0 auto 4px;
 }
 .works__single .works-type {
   font-family: "Inter", sans-serif;
@@ -1275,13 +1275,16 @@ body {
     display: flex;
     gap: 100px;
     margin-bottom: 64px;
+    width: 100%;
   }
   .works__items.square {
-    gap: 90px;
+    gap: 95px;
+    width: 100%;
   }
   .works__items.square .works-thumb {
-    width: 370px;
-    margin: 0;
+    width: 280px;
+    margin-left: 0;
+    margin-bottom: 6px;
   }
   .works__items.square .works-type {
     right: 345px;
@@ -1301,20 +1304,6 @@ body {
     font-size: 20px;
     white-space: nowrap;
   }
-  .works__items {
-    width: 100%;
-  }
-  .works .square .works__single {
-    width: 33.3333333333%;
-  }
-  .works .square .works-thumb {
-    width: 300px;
-    margin: 0;
-  }
-  .works .square .works-type {
-    top: 134px;
-    left: -18px;
-  }
   .works__single {
     position: relative;
     width: 50%;
@@ -1323,6 +1312,7 @@ body {
     position: relative;
     padding: 10px;
     width: 100%;
+    margin-bottom: 6px;
   }
   .works__single .works-thumb::after {
     content: "";
@@ -1338,11 +1328,7 @@ body {
     opacity: 1;
   }
   .works__single .works-type {
-    position: absolute;
-    top: 86px;
-    right: 468px;
     font-size: 16px;
-    rotate: -90deg;
   }
   .hobby {
     margin-bottom: 180px;
@@ -1352,6 +1338,7 @@ body {
   }
   .hobby__item {
     flex: initial;
+    width: 33.3333333333%;
   }
   .hobby__item-animals {
     padding-right: 0;

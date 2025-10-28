@@ -26,10 +26,13 @@ $(function () {
           $('#loading').fadeOut(500, function () {
             $('#main-content').fadeIn(500, function () {
               $('.top-subtitle').addClass('show'); // About meを表示
-              if (typeof window.fadeUpAction === "function") {
-                window.fadeUpAction();
-              }
-              $(window).trigger('scroll');
+              // 少し遅らせて fadeUpAction 実行
+              setTimeout(function () {
+                if (typeof window.fadeUpAction === 'function') {
+                  window.fadeUpAction();
+                }
+                $(window).trigger('scroll');
+              }, 50); // 50ms〜100msくらいでOK
             });
           });
         }, 500);

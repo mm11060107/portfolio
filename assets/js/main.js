@@ -26,11 +26,10 @@ $(function () {
           $('#loading').fadeOut(500, function () {
             $('#main-content').fadeIn(500, function () {
               $('.top-subtitle').addClass('show'); // About meを表示
-              // 念のため scroll イベントを発火
-              $(window).trigger('scroll');
               if (typeof window.fadeUpAction === "function") {
                 window.fadeUpAction();
               }
+              $(window).trigger('scroll');
             });
           });
         }, 500);
@@ -38,7 +37,6 @@ $(function () {
     }, 500);
   });
 });
-
 
 $(function () {
   const $hamburger = $(".hamburger");

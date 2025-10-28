@@ -449,6 +449,10 @@ body {
   opacity: 0;
 }
 
+#main-content {
+  overflow-x: hidden;
+}
+
 .fv__inner {
   width: 100vw;
 }

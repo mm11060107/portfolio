@@ -28,6 +28,10 @@
   opacity: 0;
 }
 
+#main-content{
+  overflow-x: hidden;
+}
+
 .fv {
   &__inner {
     width: 100vw;

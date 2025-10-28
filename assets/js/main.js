@@ -14,6 +14,12 @@ $(function () {
           $('#loading').fadeOut(500, function () {
             $('#main-content').fadeIn(500, function () {
               $('.top-subtitle').addClass('show'); // About meを表示
+              // 表示直後にフェードアップを実行
+              if (typeof window.fadeUpAction === 'function') {
+                window.fadeUpAction();
+              }
+              // 念のため scroll イベントを発火
+              $(window).trigger('scroll');
             });
           });
 
@@ -26,18 +32,18 @@ $(function () {
 
 $(function () {
   const $hamburger = $(".hamburger");
-  //セクションごとのフェードアップ
-  function fadeUpAction() {
+  // セクションごとのフェードアップ（外部からも呼べるように変更）
+  window.fadeUpAction = function () {
     $('.fadeUp').each(function () {
       const elemPos = $(this).offset().top;
       const scroll = $(window).scrollTop();
       const windowHeight = $(window).height();
 
-      if (scroll > elemPos - windowHeight + 100) {    // 要素が少し見えたらクラス付与
+      if (scroll > elemPos - windowHeight + 100) {
         $(this).addClass('show');
       }
     });
-  }
+  };
   if ($("body").hasClass("sub-page")) {
     // サブページは常に表示
     $hamburger.addClass("show");

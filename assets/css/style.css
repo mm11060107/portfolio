@@ -1306,9 +1306,10 @@ body {
   .works__header {
     gap: initial;
   }
-  .works__header .works-titleframe {
-    display: flex;
-    align-items: center;
+  .works__header .works-num {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
   .works__header .category {
     font-size: 18px;

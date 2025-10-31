@@ -1063,11 +1063,11 @@
     &__header {
       gap: initial;
 
-      .works-titleframe {
-        display: flex;
-        align-items: center;
+      .works-num{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
       }
-
       .category {
         font-size: 18px;
         white-space: nowrap;

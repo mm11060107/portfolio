@@ -439,16 +439,16 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 4px;
+    margin-bottom: 8px;
 
     .works-num {
       font-family: $sub-title;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 400;
       letter-spacing: 1.4px;
-      width: 42px;
-      height: 42px;
+      width: 36px;
+      height: 36px;
       background-color: $secondry-brown;
       color: $base-white;
       display: flex;
@@ -458,11 +458,13 @@
 
     .works-titleframe {
       width: calc(100% - 42px);
+      display: flex;
+      align-items: center;
     }
 
     .category {
       font-family: $text-ja;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
       letter-spacing: 0.8px;
 
@@ -470,10 +472,9 @@
 
     .work-title {
       font-family: $text-ja;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
       letter-spacing: 1px;
-      line-height: 1.7;
     }
   }
 

@@ -806,16 +806,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 4px;
+  margin-bottom: 8px;
 }
 .works__header .works-num {
   font-family: "Arimo", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 1.4px;
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   background-color: #443325;
   color: #ffffff;
   display: flex;
@@ -824,19 +824,20 @@ body {
 }
 .works__header .works-titleframe {
   width: calc(100% - 42px);
+  display: flex;
+  align-items: center;
 }
 .works__header .category {
   font-family: "Noto Sans", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.8px;
 }
 .works__header .work-title {
   font-family: "Noto Sans", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
-  line-height: 1.7;
 }
 .works__items:last-child .works__single:last-child {
   margin-bottom: 0;

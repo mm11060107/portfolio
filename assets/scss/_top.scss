@@ -28,7 +28,7 @@
   opacity: 0;
 }
 
-#main-content{
+#main-content {
   overflow-x: hidden;
 }
 
@@ -132,8 +132,8 @@
   &__sub-title {
     font-family: $text-ja;
     font-size: 20px;
-    font-weight: $regular;
-    letter-spacing: 3.2px;
+    font-weight: $light;
+    letter-spacing: 3px;
     color: $base-white;
   }
 
@@ -172,7 +172,7 @@
     flex-direction: column;
 
     .contents-title {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
   }
 
@@ -195,7 +195,10 @@
       }
 
       dd {
-        @include text;
+        font-family: $text-ja;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
         position: relative;
         padding-left: 28px;
 
@@ -222,8 +225,8 @@
       display: flex;
       flex-direction: column;
       border-bottom: 1px solid $base-gray;
-      padding-bottom: 16px;
-      margin-bottom: 16px;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
 
       &:last-child {
         border-bottom: none;
@@ -236,7 +239,15 @@
         margin-bottom: 4px;
       }
 
-      dd {
+      .position {
+        font-family: $text-ja;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 1.8;
+      }
+
+      .desc {
         @include text;
       }
     }
@@ -265,11 +276,11 @@
     margin-bottom: 48px;
     display: flex;
     flex-direction: column;
-    gap: 44px;
+    gap: 32px;
 
     p {
       @include text;
-      line-height: 30px;
+      line-height: 2.0;
     }
 
     span {
@@ -311,7 +322,13 @@
   }
 
   &__design {
-    width: 100%;
+    flex: 0 0 100%;
+    margin: 0 auto;
+    padding-right: 8px;
+  }
+
+  &__coding {
+    flex: 0 0 100%;
     margin: 0 auto;
   }
 
@@ -331,12 +348,11 @@
     margin-bottom: 8px;
 
     .label {
-      max-width: 154px;
       max-height: 32px;
       display: flex;
       align-items: center;
       border-left: 16px solid $accent-orange;
-      padding: 2px 0 2px 8px;
+      padding: 1px 0 1px 8px;
       margin-right: 16px;
 
       h4 {
@@ -453,8 +469,11 @@
     }
 
     .work-title {
-      @include text;
-      line-height: 22px;
+      font-family: $text-ja;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 1.7;
     }
   }
 
@@ -528,12 +547,13 @@
     width: 100%;
     position: relative;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 
     .contents-title {
       display: inline-block;
       margin: 0;
       font-size: 20px;
+      padding: 5px 10px;
     }
   }
 
@@ -569,16 +589,13 @@
     .title {
       font-family: $sub-title;
       font-weight: $bold;
-      line-height: 28px;
       letter-spacing: 1.2px;
       text-align: center;
-      font-size: 20px;
-      line-height: 28px;
-      letter-spacing: 1.2px;
+      font-size: 18px;
       margin-bottom: 10px;
       display: inline-block;
       border-bottom: 2px dotted #E6B285;
-      padding: 1px 11px;
+      padding: 1px 8px;
     }
 
     .text {
@@ -922,7 +939,7 @@
 
   //SKILLSページ
   .skills {
-    margin-bottom: 280px;
+    margin-bottom: 260px;
 
     &__inner {
       display: flex;
@@ -947,7 +964,7 @@
       gap: 48px;
 
       p {
-        line-height: 30px;
+        font-size: 16px;
       }
     }
 
@@ -1051,7 +1068,7 @@
       }
 
       .category {
-        font-size: 20px;
+        font-size: 18px;
         white-space: nowrap;
       }
 
@@ -1093,7 +1110,7 @@
 
 
       .works-type {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   }
@@ -1182,7 +1199,7 @@
 
     p {
       position: absolute;
-      left: 9%;
+      left: 10%;
       bottom: 198px;
       margin-bottom: 0;
     }

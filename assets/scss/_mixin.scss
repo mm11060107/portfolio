@@ -4,37 +4,38 @@
   font-family: $main-title;
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 3.8px;
 }
 
 @mixin sub-title{
   display: inline-block;
   font-family: $sub-title;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 1.2px;
   background-color: $secondry-brown;
   color: $base-white;
-  padding: 6px 12px;
+  padding: 4px 8px;
 }
 
 @mixin text{
   font-family: $text-ja;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.7;
 }
 
 @mixin sub-text{
   font-family: $text-en;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
 @mixin inter{
   font-family: $text-en;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 1.2px;
 }

@@ -71,7 +71,7 @@ body {
   color: #393939;
   padding-left: 23px;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
   cursor: pointer;
@@ -108,7 +108,7 @@ body {
   background-color: #443325;
   color: #ffffff;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
   padding: 4px 8px;
@@ -213,12 +213,12 @@ body {
 .contents-title {
   display: inline-block;
   font-family: "Arimo", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 1.2px;
   background-color: #443325;
   color: #ffffff;
-  padding: 6px 12px;
+  padding: 4px 8px;
 }
 
 .section-divider {
@@ -236,7 +236,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 3.8px;
   text-align: center;
   margin-bottom: 2px;
 }
@@ -282,7 +282,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 1.4px;
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.7;
   text-align: center;
   margin-bottom: 48px;
@@ -399,16 +399,12 @@ body {
   }
   .footer p {
     letter-spacing: 1.6px;
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 60px;
   }
   .fadeUp {
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .contents-title {
-    font-size: 18px;
-    letter-spacing: 1.2px;
   }
   .section-divider {
     display: none;
@@ -532,15 +528,15 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 3.8px;
   letter-spacing: 4px;
   color: #ffffff;
 }
 .about__sub-title {
   font-family: "Noto Sans", sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 3.2px;
+  font-weight: 300;
+  letter-spacing: 3px;
   color: #ffffff;
 }
 .about__stripe-rect {
@@ -574,7 +570,7 @@ body {
   flex-direction: column;
 }
 .about__contents .contents-title {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 .about__profile {
   margin-bottom: 48px;
@@ -589,14 +585,14 @@ body {
 }
 .about__profile__item dt {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
   min-width: 80px;
 }
 .about__profile__item dd {
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
   position: relative;
@@ -618,8 +614,8 @@ body {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #D9D9D9;
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
 }
 .about__career__item:last-child {
   border-bottom: none;
@@ -628,16 +624,24 @@ body {
 }
 .about__career__item dt {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
-.about__career__item dd {
+.about__career__item .position {
   font-family: "Noto Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.8;
+}
+.about__career__item .desc {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.7;
 }
 
 .skills {
@@ -658,14 +662,15 @@ body {
   margin-bottom: 48px;
   display: flex;
   flex-direction: column;
-  gap: 44px;
+  gap: 32px;
 }
 .skills__text p {
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  line-height: 30px;
+  line-height: 1.7;
+  line-height: 2;
 }
 .skills__text span {
   font-weight: 700;
@@ -697,7 +702,12 @@ body {
   left: auto;
 }
 .skills__design {
-  width: 100%;
+  flex: 0 0 100%;
+  margin: 0 auto;
+  padding-right: 8px;
+}
+.skills__coding {
+  flex: 0 0 100%;
   margin: 0 auto;
 }
 .skills__list li {
@@ -712,17 +722,16 @@ body {
   margin-bottom: 8px;
 }
 .skills__level .label {
-  max-width: 154px;
   max-height: 32px;
   display: flex;
   align-items: center;
   border-left: 16px solid #E6B285;
-  padding: 2px 0 2px 8px;
+  padding: 1px 0 1px 8px;
   margin-right: 16px;
 }
 .skills__level .label h4 {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: 1.2px;
   min-width: 0;
@@ -760,9 +769,10 @@ body {
 }
 .skills__contents {
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.7;
 }
 .skills .decoration {
   display: none;
@@ -823,10 +833,10 @@ body {
 }
 .works__header .work-title {
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  line-height: 22px;
+  line-height: 1.7;
 }
 .works__items:last-child .works__single:last-child {
   margin-bottom: 0;
@@ -878,12 +888,13 @@ body {
   width: 100%;
   position: relative;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .hobby__head .contents-title {
   display: inline-block;
   margin: 0;
   font-size: 20px;
+  padding: 5px 10px;
 }
 .hobby__gallery {
   display: grid;
@@ -914,22 +925,20 @@ body {
 .hobby__text .title {
   font-family: "Arimo", sans-serif;
   font-weight: 700;
-  line-height: 28px;
   letter-spacing: 1.2px;
   text-align: center;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 1.2px;
+  font-size: 18px;
   margin-bottom: 10px;
   display: inline-block;
   border-bottom: 2px dotted #E6B285;
-  padding: 1px 11px;
+  padding: 1px 8px;
 }
 .hobby__text .text {
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.7;
   line-height: 26px;
   text-align: left;
 }
@@ -1196,7 +1205,7 @@ body {
     width: calc(100% - 150px);
   }
   .skills {
-    margin-bottom: 280px;
+    margin-bottom: 260px;
   }
   .skills__inner {
     display: flex;
@@ -1217,7 +1226,7 @@ body {
     gap: 48px;
   }
   .skills__text p {
-    line-height: 30px;
+    font-size: 16px;
   }
   .skills__icon {
     gap: 32px;
@@ -1301,7 +1310,7 @@ body {
     align-items: center;
   }
   .works__header .category {
-    font-size: 20px;
+    font-size: 18px;
     white-space: nowrap;
   }
   .works__header .work-title {
@@ -1332,7 +1341,7 @@ body {
     opacity: 1;
   }
   .works__single .works-type {
-    font-size: 16px;
+    font-size: 18px;
   }
   .hobby {
     margin-bottom: 180px;
@@ -1396,7 +1405,7 @@ body {
   }
   .top-footer p {
     position: absolute;
-    left: 9%;
+    left: 10%;
     bottom: 198px;
     margin-bottom: 0;
   }
@@ -1685,6 +1694,9 @@ body.slide-out-prev .page-wrapper {
     border-right: 2px solid rgba(68, 51, 37, 0.7);
   }
 }
+.work {
+  overflow: hidden;
+}
 .work__wrapper {
   margin-bottom: 36px;
 }
@@ -1723,7 +1735,7 @@ body.slide-out-prev .page-wrapper {
   font-weight: 300;
   letter-spacing: 1px;
   opacity: 0.7;
-  line-height: 24px;
+  line-height: 1.5;
   margin-bottom: 8px;
 }
 .work-info__copy br {
@@ -1732,28 +1744,30 @@ body.slide-out-prev .page-wrapper {
 .work-info__category {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   border-top: 0.7px solid #393939;
   border-bottom: 0.7px solid #393939;
   padding: 10px 0;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 .work-info__list {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
 }
 .work-info__list h3 {
-  margin-right: 4px;
   font-size: 14px;
+  margin-right: 6px;
+  padding: 3px 6px;
 }
 .work-info__text {
   display: inline-block;
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
+  line-height: 1.8;
   color: #443325;
 }
 .work-info__points .points-title {
@@ -1785,10 +1799,10 @@ body.slide-out-prev .page-wrapper {
 .work-info__points .points-list li {
   position: relative;
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  line-height: 26px;
+  line-height: 1.7;
   padding-left: 1rem;
 }
 .work-info__points .points-list li::before {
@@ -1882,8 +1896,8 @@ body.slide-out-prev .page-wrapper {
   }
   .work-info__copy {
     font-size: 18px;
-    margin-bottom: 12px;
-    line-height: 32px;
+    margin-bottom: 10px;
+    line-height: 1.8;
   }
   .work-info__copy br {
     display: none;
@@ -1892,7 +1906,6 @@ body.slide-out-prev .page-wrapper {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 12px 0;
     margin-bottom: 32px;
   }
   .work-info__list {
@@ -1900,12 +1913,11 @@ body.slide-out-prev .page-wrapper {
     align-items: baseline;
   }
   .work-info__list h3 {
-    margin-right: 16px;
+    margin-right: 12px;
     font-size: 16px;
     padding: 4px 8px;
   }
   .work-info__text {
-    font-size: 18px;
     letter-spacing: 1.8px;
   }
   .work-info__points .points-title h3 {
@@ -1918,7 +1930,7 @@ body.slide-out-prev .page-wrapper {
     height: 28px;
   }
   .work-info__points .points-list {
-    gap: 10px;
+    gap: 16px;
   }
   .work__design {
     width: 50%;

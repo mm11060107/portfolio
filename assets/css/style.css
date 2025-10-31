@@ -679,11 +679,11 @@ body {
 .skills__icon {
   width: 100%;
   display: flex;
-  gap: 24px;
+  gap: 28px;
   justify-content: center;
 }
 .skills__icon img {
-  width: 21%;
+  width: 18%;
 }
 .skills__skill {
   display: flex;
@@ -993,7 +993,7 @@ body {
 }
 .contact__info-address {
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .contact__info-annotation {
   font-size: 14px;

@@ -249,6 +249,7 @@
 
       .desc {
         @include text;
+        line-height: 1.5;
       }
     }
   }
@@ -296,7 +297,7 @@
     justify-content: center;
 
     img {
-      width: 16%;
+      width: 56px;
     }
   }
 

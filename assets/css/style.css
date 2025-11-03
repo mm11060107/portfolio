@@ -642,6 +642,7 @@ body {
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.7;
+  line-height: 1.5;
 }
 
 .skills {
@@ -683,7 +684,7 @@ body {
   justify-content: center;
 }
 .skills__icon img {
-  width: 16%;
+  width: 56px;
 }
 .skills__skill {
   display: flex;

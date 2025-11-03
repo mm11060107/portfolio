@@ -296,7 +296,7 @@
     justify-content: center;
 
     img {
-      width: 18%;
+      width: 16%;
     }
   }
 
@@ -714,7 +714,7 @@
 }
 
 // PC版-レスポンシブ
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 
   // ファーストビュー
   .fv {
@@ -1022,10 +1022,7 @@
     margin-bottom: 180px;
 
     &__title {
-      flex-direction: row;
-      justify-content: left;
       margin-bottom: 100px;
-      gap: 40px;
 
       .annotation {
         font-size: 16px;
